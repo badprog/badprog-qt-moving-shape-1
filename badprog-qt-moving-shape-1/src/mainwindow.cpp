@@ -12,8 +12,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    MovingShape *shape = new MovingShape(this);
-    setCentralWidget(shape);
+    _shape = new MovingShape(this);
+    setCentralWidget(_shape);
     setWindowTitle("BadproG.com");
 }
 
@@ -21,6 +21,7 @@ MainWindow::MainWindow(QWidget *parent) :
  * @brief MainWindow::~MainWindow
  */
 MainWindow::~MainWindow() {
+    delete _shape;
     delete ui;
 }
 

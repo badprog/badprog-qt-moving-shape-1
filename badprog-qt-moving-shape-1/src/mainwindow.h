@@ -4,6 +4,8 @@
 
 #include <QMainWindow>
 
+class MovingShape;
+
 namespace Ui {
 class MainWindow;
 }
@@ -18,6 +20,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    MovingShape *_shape;
 
 protected:
 };
